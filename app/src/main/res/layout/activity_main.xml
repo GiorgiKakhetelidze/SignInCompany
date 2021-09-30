@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_cream"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="25dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="25dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/welcomeTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="@color/black"
+        android:textSize="57sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/toTxtView"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24000001"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/toTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/shareTxtView"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTxtView" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/shareTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/logoImgView"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/toTxtView"
+        tools:text="SHAREMAC" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logoImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/serviceAppTxtView"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/shareTxtView"
+        app:srcCompat="@drawable/ic_sam" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/serviceAppTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_inset"
+        android:text="@string/service_app"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emailEditTxtView"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/logoImgView" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/emailEditTxtView"
+        style="@style/input_field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_inset"
+        android:drawableStart="@drawable/ic_email"
+        android:hint="@string/email"
+        app:layout_constraintBottom_toTopOf="@+id/passwordEditTxtView"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/serviceAppTxtView" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/passwordEditTxtView"
+        style="@style/input_field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_inset"
+        android:drawableStart="@drawable/ic_key"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/orTxtView"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditTxtView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/eyeImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/std_inset"
+        app:layout_constraintBottom_toBottomOf="@id/passwordEditTxtView"
+        app:layout_constraintEnd_toEndOf="@id/passwordEditTxtView"
+        app:layout_constraintTop_toTopOf="@id/passwordEditTxtView"
+        app:srcCompat="@drawable/ic_eye_close" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/forgetPasswordTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/forget_password"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintTop_toBottomOf="@id/passwordEditTxtView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/orTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_inset"
+        android:text="@string/or"
+        android:textColor="@color/gray_200"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/googleButton"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditTxtView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/googleButton"
+        style="@style/input_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_inset"
+        android:drawableStart="@drawable/ic_google"
+        android:text="@string/continue_with_google_account"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtnCardView"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/orTxtView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginBtnCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gdEnd"
+        app:layout_constraintStart_toStartOf="@id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/googleButton">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_color"
+            android:text="@string/sign_in"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
